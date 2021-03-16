@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Adapters</string>
+    <string name="price">%.2f Eur</string>
+</resources>
