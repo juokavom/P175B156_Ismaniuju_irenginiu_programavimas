@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CPU</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="manufacturer_header">Manufacturer</string>
+    <string name="model_header">Model</string>
+    <string name="price_header">Price</string>
+    <string name="submit_button_text">Add cpu</string>
+    <string name="cpu_label">New CPU added</string>
+    <string name="example_cpu">AMD Ryzen 5800X added</string>
+    <string name="example_man">AMD</string>
+    <string name="example_mod">Ryzen 5800X</string>
+    <string name="example_price">899</string>
+</resources>

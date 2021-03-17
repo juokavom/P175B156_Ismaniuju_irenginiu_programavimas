@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FavoriteMovie</string>
+    <string name="set_movie_header">Set your favorite movie</string>
+    <string name="movie_title_input">Movie title</string>
+    <string name="director_name_input">Director\'s name</string>
+    <string name="submit_movie">Set favorite movie</string>
+    <string name="your_movie">Your favorite movie:</string>
+    <string name="other_movies">Other movies:</string>
+</resources>
