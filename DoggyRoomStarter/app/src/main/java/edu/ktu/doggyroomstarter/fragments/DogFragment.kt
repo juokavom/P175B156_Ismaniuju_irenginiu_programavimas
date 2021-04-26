@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import edu.ktu.doggyroomstarter.R
 import edu.ktu.doggyroomstarter.adapters.DogAdapter
+import edu.ktu.doggyroomstarter.database.DogDatabase
 import edu.ktu.doggyroomstarter.databinding.FragmentDogBinding
 import edu.ktu.doggyroomstarter.viewmodels.DogViewModel
+import edu.ktu.doggyroomstarter.viewmodels.DogViewModelFactory
 
 class DogFragment : Fragment() {
     override fun onCreateView(
@@ -21,7 +23,14 @@ class DogFragment : Fragment() {
         val adapter = DogAdapter()
         binding.dogRecyclerView.adapter = adapter
 
-        val viewModel : DogViewModel by viewModels()
+        val viewModel: DogViewModel by viewModels {
+            DogViewModelFactory(
+                DogDatabase.getInstance(
+                    requireContext()
+                )
+            )
+        }
+
         binding.viewmodel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
