@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="viewmodel"
+            type="edu.ktu.guessthenumber.viewmodels.GameViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:text="@{@string/guess_range(viewmodel.minRange, viewmodel.maxRange)}"
             tools:text="Guess a number between $d and %d" />
 
         <TextView
@@ -30,6 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="@{@string/remaining_attempts(viewmodel.attemptsRemaining)}"
             tools:text="Attempts remaining: %d" />
 
         <TextView
