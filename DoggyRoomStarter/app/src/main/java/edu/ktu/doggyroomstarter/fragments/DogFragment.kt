@@ -20,9 +20,6 @@ class DogFragment : Fragment() {
     ): View? {
         val binding = FragmentDogBinding.inflate(inflater)
 
-        val adapter = DogAdapter()
-        binding.dogRecyclerView.adapter = adapter
-
         val viewModel: DogViewModel by viewModels {
             DogViewModelFactory(
                 DogDatabase.getInstance(
@@ -30,6 +27,11 @@ class DogFragment : Fragment() {
                 )
             )
         }
+
+        val adapter = DogAdapter(DogAdapter.DogClickListener {
+            viewModel.deleteDog(it)
+        })
+        binding.dogRecyclerView.adapter = adapter
 
         binding.viewmodel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner

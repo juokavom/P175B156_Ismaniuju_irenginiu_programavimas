@@ -30,4 +30,12 @@ class DogViewModel(private val db: DogDatabase) : ViewModel() {
             _dogs.postValue(db.dogDao().getAllDogs())
         }
     }
+
+    fun deleteDog(dog: Dog) {
+        viewModelScope.launch {
+            db.dogDao().delete(dog)
+            getDogs()
+        }
+    }
+
 }

@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import edu.ktu.doggyroomstarter.databinding.ItemDogBinding
 import edu.ktu.doggyroomstarter.models.Dog
 
-class DogAdapter : ListAdapter<Dog, DogAdapter.ViewHolder>(DogDiffCallback()) {
+class DogAdapter(private val clickListener: DogClickListener) :
+    ListAdapter<Dog, DogAdapter.ViewHolder>(DogDiffCallback()) {
 
     class ViewHolder(private val binding: ItemDogBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(dog: Dog) {
+        fun bind(dog: Dog, clickListener: DogClickListener) {
             binding.dog = dog
+            binding.clickListener = clickListener
         }
     }
 
@@ -32,6 +34,10 @@ class DogAdapter : ListAdapter<Dog, DogAdapter.ViewHolder>(DogDiffCallback()) {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), clickListener)
+    }
+
+    class DogClickListener(private val clickListener: (dog: Dog) -> Unit) {
+        fun onClick(dog: Dog) = clickListener(dog)
     }
 }
