@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DoggyRoomStarter</string>
+    <string name="dog_year_breed">%d year old %s</string>
+</resources>
