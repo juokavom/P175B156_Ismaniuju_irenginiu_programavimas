@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">GuessTheNumber</string>
+    <string name="guess_btn">Guess</string>
+    <string name="remaining_attempts">Remaining attempts: %d</string>
+    <string name="too_low">Guessed number %d was too low.</string>
+    <string name="too_high">Guessed number %d was too high.</string>
+    <string name="guess_a_number">Guess a number</string>
+    <string name="guess_range">Guess a number between %d and %d</string>
+    <string name="nan_or_empty">Please enter a number</string>
+</resources>
