@@ -9,5 +9,32 @@
         android:id="@+id/gameFragment"
         android:name="edu.ktu.guessthenumber.GameFragment"
         android:label="fragment_game"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="edu.ktu.guessthenumber.GameOverFragment"
+        android:label="GameOverFragment" >
+        <argument
+            android:name="win"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <argument
+            android:name="number"
+            app:argType="integer" />
+        <argument
+            android:name="attempts"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/gameOverFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

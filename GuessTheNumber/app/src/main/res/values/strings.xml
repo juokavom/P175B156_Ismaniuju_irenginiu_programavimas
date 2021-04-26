@@ -7,4 +7,11 @@
     <string name="guess_a_number">Guess a number</string>
     <string name="guess_range">Guess a number between %d and %d</string>
     <string name="nan_or_empty">Please enter a number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="outcome_win">You Win!</string>
+    <string name="summary_win">The guessed number was %d and you guessed it in %d attempts.</string>
+    <string name="outcome_lose">You Lost!</string>
+    <string name="summary_lose">The number was %d and you failed to guess it.</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
